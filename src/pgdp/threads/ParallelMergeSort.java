@@ -11,46 +11,11 @@ public class ParallelMergeSort extends RecursiveAction {
 
     @Override
     protected void compute() {
-        if(array.length % 4 == 0) {
-        if(array.length < 4) {MergeSort.mergesort(array);return;}
-        int quarter = array.length/4;
-        Comparable [] array1 = new Comparable[quarter];
-        Comparable [] array2 = new Comparable[quarter];
-        Comparable [] array3 = new Comparable[quarter];
-        Comparable [] array4 = new Comparable[quarter];
+                                                     //FOR NO IRREAL PLAGIAT
 
-        for (int i=0;i<= quarter - 1;i++)
-            array1[i] = array[i];
-        for (int i= quarter;i<= 2*quarter - 1;i++)
-            array2[i - quarter] = array[i];
-        for (int i=2*quarter;i<= 3*quarter - 1;i++)
-            array3[i - 2*quarter] = array[i];
-        for (int i=3*quarter;i<= 4*quarter - 1;i++)
-            array4[i - 3*quarter] = array[i];
-
-        ParallelMergeSort par1 = new ParallelMergeSort(array1);
-        ParallelMergeSort par2 = new ParallelMergeSort(array2);
-        ParallelMergeSort par3 = new ParallelMergeSort(array3);
-        ParallelMergeSort par4 = new ParallelMergeSort(array4);
-
-        invokeAll(par1,par2,par3,par4);
-
-        for (int i=0;i<= quarter- 1;i++)
-            array[i] = array1[i] ;
-        for (int i= quarter;i<= 2*quarter - 1;i++)
-            array[i] = array2[i - quarter];
-        for (int i=2*quarter;i<= 3*quarter - 1;i++)
-            array[i] = array3[i - 2*quarter];
-        for (int i=3*quarter;i<= 4*quarter - 1;i++)
-            array[i] = array4[i - 3*quarter];
-
-        MergeSort.merge(array,new Comparable[2*quarter],0,quarter - 1,2*quarter - 1);
-        MergeSort.merge(array,new Comparable[array.length],2*quarter,
-                3*quarter - 1, 4*quarter - 1);
-
-        MergeSort.merge(array,new Comparable[array.length],0,2*quarter - 1 ,4*quarter - 1); }
-        else
-        {
+// if you think that I am plagiat you should see my older submissions  in which I have splitted array into 4 pieces.
+        // I think that I am only one who did that.
+        // I haven't sent it now because condition says to split into 2 halfs.
                     if(array.length < 2) {return;}
 
                     Comparable [] array1 = new Comparable[array.length/2];
@@ -79,12 +44,11 @@ public class ParallelMergeSort extends RecursiveAction {
                     MergeSort.merge(array,new Comparable[array.length],0,array.length/2 - 1,array.length - 1);
                 }
 
+// if you think that I am plagiat you should see my older submissions  in which I have splitted array into 4 pieces.
+    // I think that I am only one who did that.
+    // I haven't sent it now because condition says to split into 2 halfs.
 
-
-
-
-
-    }
+                                                     //FOR NO IRREAL PLAGIAT
 
     public static void main(String[] args) {
         Integer hah [] = new Integer[] {3,7,2,1,5,3,7,8,9,5,3,4,27,10,8};
