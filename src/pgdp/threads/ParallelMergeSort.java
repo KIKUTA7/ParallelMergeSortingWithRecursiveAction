@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.concurrent.RecursiveAction;
 
 public class ParallelMergeSort extends RecursiveAction {
-    Comparable[] array ;
+    private Comparable[] array ;
     public ParallelMergeSort(Comparable[] array) {
         this.array = array;
     }
